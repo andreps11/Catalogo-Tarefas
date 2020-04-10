@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <section id="intro">
+            <header>
+                <a href="index.html">
+                    <img src="logo.png" alt="Objetivos">
+                </a>
+            </header>
+
+            <main>
+                <p>Lembrar de todas as atividades do dia a dia às vezes não é fácil.</p>
+                <p>Por isso esse sistema te ajuda a catalogar suas atividades a serem realizadas.</p>
+                <p>Comece clicando em <strong>ver atividades</strong> para visualizar todas as suas atividades ou 
+                    clique em <strong>adicionar</strong> para cadastrar novas atividades.
+                </p>
+            </main>
+
+            <section id="buttons">
+                <button onclick="onOff()">+ Adicionar</button>
+                <a href="activities.html" class="button">Ver Atividades</a>
+            </section>
+        </section>
+
+        <section id="last-atividades">
+            <div class="atividade">
+                <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729007.svg" 
+                    alt="Imagem de curso de Programação"
+                >
+                <div class="content">
+                    <h3>Programação com React</h3>
+                    <p>Estudo</p>
+                    <div class="description">
+                        Introdução e Conceitos básicos, Exercícios e testes, 
+                        Criando um projeto React do zero, React Avançado.
+                    </div>
+                </div>
+            </div>
+
+            <div class="atividade">
+                <img 
+                    src="https://image.flaticon.com/icons/svg/2737/2737572.svg" 
+                    alt="Imagem Vídeoaula da Faculdade"
+                >
+                <div class="content">
+                    <h3>Vídeoaula da Faculdade</h3>
+                    <p>Estudo</p>
+                    <div class="description">
+                        Conceitos de Engenharia de software
+                    </div>
+                </div>
+            </div>
+
+            <div class="atividade">
+                <img 
+                    src="https://image.flaticon.com/icons/svg/2682/2682450.svg" 
+                    alt="Imagem do Livro"
+                >
+                <div class="content">
+                    <h3>Ler o Capítulo 3 do Livro Redes de Computadores</h3>
+                    <p>Estudo</p>
+                    <div class="description">
+                        A camada de enlace.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="modal" class="hide">
+        <div class="content">
+            <h1>Nova Atividade</h1>
+
+            <form action="">
+                <div class="input-wrapper">
+                    <label for="title">Título da Atividade</label>
+                    <input type="text" name="title">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="category">Categoria</label>
+                    <input type="text" name="category">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="image">Link da imagem</label>
+                    <input type="url" name="image">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="description">Descrição da Atividade</label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                </div>
+
+                <!-- <button onclick="onOff()">Voltar</button> -->
+                <a href="#" onclick="onOff()">Voltar</a>
+                <button>Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

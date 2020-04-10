@@ -1,0 +1,436 @@
+body {
+    background: #e5e5e5;
+    color: #25282B;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+body.hideScroll {
+    overflow: hidden;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+
+#container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* header img {
+    margin: auto 170px;
+} */
+
+main {
+    margin: 10px 0;
+}
+
+button {
+    background: none;
+    color: #36401F;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    outline: none;;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+/* button.fat {
+    background: #36401F;
+    color: white;
+    width: 110px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px rgba(0, 255, 9, 0.16);
+} */
+
+.button {
+    width: 130px;
+    height: 35px;
+    background-color: #36401F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 8px 16px rgba(0, 255, 9, 0.16);
+}
+
+.button:hover {
+    background-color: #082400;
+    text-decoration: none;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#last-atividades {
+    margin-top: 20px;
+}
+
+.atividade {
+    display: flex;
+    background-color: #FFF;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.atividade img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* #atividades.concluded {
+    background-color: red;
+} */
+
+#modal {
+    background: #36401F;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 400ms;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content {
+    margin-top: 20px;
+    color: white;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.content form div:nth-child(3), 
+.content form div:nth-child(4) {
+    grid-column: span 2;
+}
+
+.content h1 {
+    font-size: 25px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid rgba(17, 20, 11, 0.5);
+    outline: none;
+    font-size: 12px;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    align-self: end;
+    transition: 400ms;
+}
+
+form a:hover {
+    background: #fff;
+    color: #36401F;
+}
+
+form button {
+    background: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    margin-top: 32;
+    /* margin-left: 40px; */
+    cursor: pointer;
+    grid-column: 2;
+    justify-self: end;
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: #ffffff22;
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#page-atividades #container {
+    display: block;
+}
+
+#page-atividades header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-atividades nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-atividades nav li {
+    list-style: none;
+    margin-right: 16px;
+}
+
+#page-atividades nav li a {
+    text-decoration: none;
+    color: #36401F;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#page-atividades nav li:last-child {
+    margin: 0;
+    width: 130px;
+    height: 35px;
+    background-color: #36401F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+#page-atividades nav li:last-child:hover {
+    background-color: #082400;
+}
+
+#page-atividades nav li:last-child a {
+    color: white;
+}
+
+section#title {
+    text-align: center;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+section#title,
+section#atividades {
+    margin-top: 18px;
+}
+
+@media screen and (min-width: 577px) {
+    #container {
+        width: 90%;
+        margin: 15px auto;
+        display: flex;
+    }
+
+    header img {
+        margin-left: 50px;
+    }
+
+    #intro {
+        width: 290px;
+        margin-top: 50px;
+        margin-right: 10px;
+    }
+
+    main {
+        margin: 25px 0;
+    }
+
+    main p, strong {
+        font-size: 14px;
+    }
+
+    .atividade {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .atividade img {
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+    }
+
+    .atividade button {
+        width: 80px;
+        height: 30px;
+        background: #36401F;
+        border-radius: 4px;
+        color: white;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: -5px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .atividade button:hover {
+        background-color: #082400;
+    }
+
+    .atividade h3, .description {
+        font-size: 14px;
+    }
+    
+    .atividade p {
+        font-size: 12px;
+    }
+
+    #modal {
+        position: absolute;
+    }
+
+    section#atividades {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    section#atividades .atividade {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    p, .description {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+    }
+
+    #container {
+        width: 80%;
+        max-width: 980px;
+        margin: 25px auto;
+        display: flex;
+    }
+
+    #intro {
+        width: 500px;
+        margin-right: 20px;
+    }
+
+    main {
+        margin: 32px 0;
+    }
+
+    main p, strong {
+        font-size: 16px;
+    }
+
+    .atividade {
+        padding: 30px;
+    }
+
+    .atividade img {
+        width: 60px;
+        height: 60px;
+        margin-right: 32px;
+    }
+
+    .atividade h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .atividade p {
+        font-size: 16px;
+        margin: 8px 0;
+        color: #777;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    button.fat {
+        width: 130px;
+    }
+
+    #modal {
+        position: absolute;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    form input, form textarea {
+        font-size: 14px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form button {
+        margin-left: 70px;
+    }
+
+    section#atividades {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    section#atividades .atividade {
+        margin: 0;
+    }
+}
