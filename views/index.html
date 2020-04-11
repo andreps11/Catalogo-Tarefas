@@ -1,0 +1,30 @@
+{% extends  "layout.html" %}
+
+{% block content %}
+
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="/logo.png" alt="Objetivos">
+        </a>
+    </header>
+
+    <main>
+        <p>Lembrar de todas as atividades do dia a dia às vezes não é fácil.</p>
+        <p>Por isso esse sistema te ajuda a catalogar suas atividades a serem realizadas.</p>
+        <p>Comece clicando em <strong>ver atividades</strong> para visualizar todas as suas atividades ou 
+            clique em <strong>adicionar</strong> para cadastrar novas atividades.
+        </p>
+    </main>
+
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar</button>
+        <a href="/activities" class="button">Ver Atividades</a>
+    </section>
+</section>
+
+<section id="last-atividades">
+    {% include "all_atividades.html" %}
+</section>
+
+{% endblock %}
